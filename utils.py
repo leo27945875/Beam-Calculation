@@ -186,7 +186,7 @@ def WriteOutput(usedSteel, usedConcrete, usedTemplate, path):
     count['模板總面積'], units['模板總面積'] = usedTemplate, "m^2"
     for steelNum, weight in usedSteel.items():
         count[f"{steelNum}鋼筋總重量"] = weight
-        units [f"{steelNum}鋼筋總重量"] = "m"
+        units [f"{steelNum}鋼筋總重量"] = "kg"
     
     result = pd.DataFrame({"數值": count, "單位": units})
     result.index.name = "品類"
